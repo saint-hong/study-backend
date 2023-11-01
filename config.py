@@ -1,10 +1,11 @@
 # sqlalchemy test file
 ## database connect information
 
+rds_endpoint = "backend-test-1.c1mer0obgfjg.ap-northeast-2.rds.amazonaws.com"
 db = {
     "user": "root",
     "password": "hshkuber1234",
-    "host": "localhost",
+    "host": rds_endpoint,
     "port": 3306,
     "database": "minitter"
 }
