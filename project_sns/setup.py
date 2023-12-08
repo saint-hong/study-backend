@@ -1,6 +1,6 @@
 # this is setup file for deploying minitter api in aws EC2 instance
 
-import sys
+
 
 from flask_script import Manager
 # import flask object from source code file : app.py
