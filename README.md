@@ -17,6 +17,7 @@
 ## 소스코드 설명
 
 ### 1) 실행 로직
+- setup 파일에서 AWS의 EC2 가상서버에서 api를 실행하기 위해 Twisted 모듈을 사용하여 app 객체를 연결
 - config 파일에서 DB 접속 정보를 연결, app 파일에서 view, service, model 레이어를 연결
 - view 파일에 각 엔드포인트 구현, service 파일에서 엔드포인트에서 요청에 대한 로직 실행, model 파일에서 DB 처리 요청에 응답
 
