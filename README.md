@@ -45,6 +45,12 @@
 - EC2 가상서버와 GitHub 레포지토리를 deploy key로 연결하여 소스코드 파일 다운로드
 - 다운로드한 소스코드를 가상서버 환경에 맞도록 일부 수정 후 서비스 배포
 
+#### AWS EC2
+<img src="./images/aws_ec2.png">
+
+#### AWS RDS
+<img src="./images/aws_rds.png">
+
 ### 6) Unit Test
 - pytest 모듈과 flask의 test_client() 함수를 사용하여 각 test 엔드포인트 별로 요청, 응답 일치 테스트
 - test 시 DB에서 중복 데이터 오류가 발생하지 않도록 test 전후 자동으로 데이터를 생성하고 지울 수 있는 pytest의 setup_function(), teardown_function() 함수 사용
@@ -52,29 +58,44 @@
 
 ## 서비스 실행
 
+#### ping
+<img src="./images/ping.png">
 
+#### sign-up
+- request, response
+<img src="./images/sign_up.png">
+- DB
+<img src="./images/sign_up_db.png">
 
+#### login
+- request, response
+<img src="./images/login.png">
 
+#### send message
+- request, response
+<img src="./images/tweet.png">
+- DB
+<img src="./images/tweet_db.png">
 
+#### follow
+- request, response
+<img src="./images/follow.png">
+- DB
+<img src="./images/follow_db.png">
 
+#### timeline
+- request, response
+<img src="./images/timeline.png">
 
+#### profile img upload
+- request, response
+<img src="./images/profile_img_upload.png">
+- DB
+<img src="./images/profile_img_upload_db.png">
+- AWS S3
+<img src="./images/profile_img_upload_aws.png">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### profile img download
+- request, response
+<img src="./images/profile_img_download.png">
 
