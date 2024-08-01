@@ -59,44 +59,65 @@
 
 ## 서비스 실행
 
-#### ping
+### ping 송수신 테스트
+- ping curl을 보내면 "some some pong" 이라는 메시지를 응답한다.
+
 <img src="./images/ping.png">
 
-#### sign-up
-- request, response
+### sign-up
+- 회원가입을 하기 위해서 email, name, password, profile 을 입력해야한다. 
+- 회원가입이 완료되면 입력한 정보를 json 형태로 반환한다.
+
 <img src="./images/sign_up.png">
-- DB
+
+- DB에 저장 된 회원 정보 확인
+
 <img src="./images/sign_up_db.png">
 
-#### login
-- request, response
+### login
+- 로그인을 하려면 email과 password를 입력하고 request 해야한다. 
+- 입력한 회원 정보가 DB에 저장된 정보와 일치하는 지 확인후 일치하면 access_token을 생성하여 반환한다.
+
 <img src="./images/login.png">
 
-#### send message
-- request, response
+### send message
+- 로그인 후 tweet 메시지를 보내려면 tweet과 access_token 값을 함께 request에 보내야한다.
+
 <img src="./images/tweet.png">
-- DB
+
+- access_token이 DB에 저장된 정보와 일치하면 tweet이 DB의 tweets 테이블에 저장 된다.
+
 <img src="./images/tweet_db.png">
 
-#### follow
-- request, response
+### follow
+- 다른 아이디를 가진 사용자를 flow 하는 기능으로, 로그인 된 상태에서 follow할 대상의 아이디 값을 reqeust에 보낸다. 이때도 acesse_token 값을 함께 입력한다.
+
 <img src="./images/follow.png">
-- DB
+
+- acesse_token 값이 DB의 정보와 일치하면 follow가 성공하고, users_follow_list 테이블에 저장된다.
+
 <img src="./images/follow_db.png">
 
-#### timeline
-- request, response
+### timeline
+- 사용자의 tweet과 follow한 사용자의 tweet을 볼 수 있는 타임라인 기능으로, request시 사용자의 모든 tweet을 반환한다.
+
 <img src="./images/timeline.png">
 
-#### profile img upload
-- request, response
+### profile img upload
+- 사용자의 프로필 이미지를 업로드하기 위해 request를 보내면 AWS 클라우드의 저장소에 이미지 파일이 업로드 되고, 동시에 로컬 DB의 users 테이블에 이미지의 AWS url 값이 저장된다.
+
 <img src="./images/profile_img_upload.png">
+
 - DB
+
 <img src="./images/profile_img_upload_db.png">
+
 - AWS S3
+
 <img src="./images/profile_img_upload_aws.png">
 
-#### profile img download
-- request, response
+### profile img download
+- 프로필 이미지의 AWS 저장소 url을 다운로드 하면 원하는 디렉토리에 저장 할 수 있다. 
+
 <img src="./images/profile_img_download.png">
 
